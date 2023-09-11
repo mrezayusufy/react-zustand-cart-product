@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CartIcon from "./icons/cartIcon"
 const Cart = () => {
   return (
     <details className="cart-list">

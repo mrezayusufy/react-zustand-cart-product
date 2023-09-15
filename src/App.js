@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react';
 import './style.css';
-import useCartStore from './store/cartStore';
-import Product from './product';
+import useProductStore from './store/productStore';
+import ProductList from './productList';
 import Cart from './cart';
 
 export default function App() {
-  const { products, fetchProducts } = useCartStore();
+  const fetchProducts = useProductStore((state) => state.fetchProducts);
+
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+  }, []);
+
   return (
     <div>
       <Cart />
       <h1>Products</h1>
-      <div className="products">
-        {products.map((item) => (
-          <Product item={item} key={item.id} />
-        ))}
-      </div>
+      <ProductList />
     </div>
   );
 }

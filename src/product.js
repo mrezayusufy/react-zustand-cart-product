@@ -3,7 +3,7 @@ import React from 'react';
 import useCartStore from './store/cartStore';
 
 const Product = ({ item }) => {
-  const { addToCart } = useCartStore();
+  const addToCart  = useCartStore((state) => state.addToCart);
   const handleAddToCart = React.useCallback(
     (product) => {
       addToCart(product);

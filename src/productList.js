@@ -8,7 +8,9 @@ function ProductList() {
     <>
       <div className="products">
         {products.map((product) => (
-          <Product item={product} key={product.id} />
+          <>
+            <Product item={product} key={product.id} />
+          </>
         ))}
       </div>
       <div>

@@ -199,3 +199,58 @@ button:hover {
   font-size: 1px;
   border-radius: 10px;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.product-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.product-slider-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.product-slider-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-slider-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  width: 100%;
+  transition: max-width 0.2s ease-out;
+}
+
+.product-slider-progress-bar {
+  width: 0;
+  transition: 0.2s ease-out;
+}
+
+.reversed-container {
+  flex-direction: row-reverse;
+}
+
+img {
+  max-width: 100%;
+}
+
+.reversed-container .product-slider-list {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.reversed-container .product-slider-list-item {
+  width: 100%;
+}

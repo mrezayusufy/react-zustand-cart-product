@@ -11,10 +11,10 @@ const Product = ({ item }) => {
     [addToCart]
   );
   return (
-    <div className="product">
+    <div className="product" onTouchMove={(event) => console.log(event)}>
       <h3>{item.title}</h3>
       <span>${item.price}</span>
-      <img src={item.image} width={200} height={200} />
+      <img src={item.image} draggable={false} onTouchMove={(e) => console.log(e)} width={200} height={200} />
       <label>{item.category}</label>
       <div className="buttons">
         <button onClick={() => handleAddToCart(item)}>
